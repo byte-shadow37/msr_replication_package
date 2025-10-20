@@ -1,0 +1,177 @@
+.thumbnail {
+	height: 64px;
+	width: 64px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	background-size:64px auto;
+	background-position: center;
+	margin: 0 ;
+	border-radius: 50%;
+}
+
+#main /* Overridden */ {
+	width: 100%;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+  }
+
+body{counter-reset: section}
+h2{counter-reset: sub-section}
+h3{counter-reset: composite}
+h4{counter-reset: detail}
+
+ h2:before{
+     counter-increment: section;
+     content: counter(section) " ";
+ }
+ h3:before{
+     counter-increment: sub-section;
+     content: counter(section) "." counter(sub-section) " ";
+ }
+ h4:before{
+	counter-increment: composite;
+     content: counter(section) "." counter(sub-section) "." counter(composite) " ";
+ }
+ h5:before{
+     counter-increment: detail;
+     content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+ }
+
+h3 {
+	font-size: 220%
+}
+h4  {
+	font-size: 200%
+}
+
+h5 {
+	margin: .6em 0;
+	clear: left;
+	color: #5c5a5a;
+	font-weight: 400;
+	font-family: 'Yanone Kaffeesatz';
+	font-size: 180%
+}
+
+
+abbr {
+	border-bottom: dotted 1px #ccc;
+	cursor: pointer
+}
+
+#authors {
+	margin-top: 20px;
+}
+
+#authors span {
+	margin-right: 20px;
+}
+
+.toolinfo {
+	width: 100%
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%
+}
+
+thead {
+	font-weight: bold
+}
+
+th {
+	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	background-color: #efefef;
+	vertical-align: middle;
+	font-weight: bold
+}
+	
+td, th {
+	border-bottom: solid 1px #dfdfdf;
+	padding: 2px 5px;
+}
+
+ul , ol{
+	margin-left: 17px;
+	padding-left: 0
+}
+
+tfoot td {
+	border-bottom: solid 1px #ccc;
+	background-color: #efefef;
+}
+
+/*td.rotate {
+	vertical-align: middle
+}
+td.rotate  div {
+	transform: rotate(270deg);
+}*/
+
+.toolinfo tr:first-child td {
+	border-top: solid 1px #dfdfdf
+}
+
+.toolinfo  .firstcol {
+	width: 180px;
+}
+
+.toolinfo td:first-child {
+	font-weight: bold;
+	background-color: #efefef
+}
+
+code {
+	background-color: #dedede;
+	font: 10pt consolas; 
+	border: solid 1px #ccc
+}
+
+
+
+#args td:nth-child(3), #args td:nth-child(4) {
+	text-align: center
+}
+
+table {
+	counter-increment: Serial;
+}
+table caption:before {
+  content: "Table " counter(Serial) " - ";
+}
+ 
+#resultstbl tbody td {
+	text-align: center
+ }
+#resultstbl tbody td:hover {
+	background-color: #eee;
+	 
+}
+col#projects {
+	width: 150px;
+	/*background-color: #efefef*/
+	border-right: solid 1px #dedede;
+	color: black
+}
+col.tool {
+	width: 120px
+}
+
+.bibtex {
+	border: solid 1px #ccc;
+	background: #F2F2F2;
+	padding: 5px 15px;
+	border-radius: 2px;
+	font-family: consolas, monospace;
+	margin: 10px 0 20px;
+}
+.bibtex pre {
+	margin: 0;
+	padding: 0
+}

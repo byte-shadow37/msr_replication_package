@@ -1,0 +1,47 @@
+# Core data handling
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Command-line interface and argument parsing
+argparse>=1.4.0
+
+# HTTP requests and GitHub API access
+requests>=2.31.0
+aiohttp>=3.9.0
+tqdm>=4.66.0
+
+# Data storage and SQLite manipulation
+sqlalchemy>=2.0.0
+sqlite-utils>=3.36.0
+
+# Excel / CSV I/O
+openpyxl>=3.1.2
+xlrd>=2.0.1
+
+# Statistical analysis
+scipy>=1.11.0
+statsmodels>=0.14.0
+
+# Plotting and visualization (optional for table summaries)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Parallel / async operations
+concurrent-log-handler>=0.9.24
+asyncio==3.4.3
+
+# File and system utilities
+python-dotenv>=1.0.0
+pathlib>=1.0.1
+glob2>=0.7
+
+# Data scraping / web automation (used in PR scraping)
+beautifulsoup4>=4.12.0
+lxml>=4.9.3
+
+# RefactoringMiner integration (system calls)
+subprocess-run>=0.0.8
+
+# Notebook / export tools (for generating HTML tables, optional)
+jupyterlab>=4.0.0
+tabulate>=0.9.0

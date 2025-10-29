@@ -58,3 +58,26 @@
     code {
       background-image: none !important;
     }
+
+    /* Title fixes */
+#sitetitle h1 { margin: 0; }
+#sitetitle h1 a {
+  display: block;
+  line-height: 1.15;          /* was too small -> caused overlap */
+  letter-spacing: 0;           /* optional: remove tight tracking */
+  text-shadow: none;           /* remove “double” look */
+  -webkit-text-stroke: 0;      /* just in case an outline is applied */
+  word-break: normal;
+  white-space: normal;
+}
+
+/* If the template uses pseudo-elements to duplicate the text */
+#sitetitle h1 a::before,
+#sitetitle h1 a::after {
+  content: none !important;
+}
+
+/* Optional: scale the heading responsively so it doesn’t wrap awkwardly */
+#sitetitle h1 a {
+  font-size: clamp(32px, 6vw, 72px);
+}

@@ -82,7 +82,7 @@ for architectural alignment and sustainable system design.
 			<h2 id="rscripts">Python Scripts</h2>
 			<p>
 			    The scripts are inside the <code>Scripts/</code> folder.
-				 <a href="scripts/requirements.txt" class="csv-link" download>Requirements.txt</a> includes the necessary Python packages. It is in the Scripts folder as well.
+				 <a href="scripts/requirements.txt" class="csv-link" download>Requirements.txt</a> includes the necessary Python packages. It is in the Scripts folder as well. <em>Install:</em> <code>pip install -r requirements.txt</code>
 			</p>
 			<ul>
 			    <li>
@@ -127,60 +127,63 @@ for architectural alignment and sustainable system design.
 
 <h2 id="rscripts">Experimental Data</h2>
 <p>
-    The experimental data used in this study are derived from the AIDev dataset and its related GitHub mining results. 
+    The experimental data used in this study are derived from the AIDev dataset and its related GitHub mining results. The data can be downloaded <a href="https://stevens0-my.sharepoint.com/:u:/g/personal/ealomar_stevens_edu/ETsmVyVMkG9Bq3oY5PE-q8IBy8fNTuwY_aqWN3leFAFOOA?e=k7zXj7" class="csv-link" download>here</a>.
     Below are brief descriptions of each dataset:
 </p>
 <ul>
     <li>
-        <code>all_pull_request.csv</code> — A large master dataset containing metadata for all pull requests across repositories, including IDs, descriptions, timestamps, and repository links.
+        <code>all_pull_requests</code> — A large master dataset containing metadata for all pull requests across repositories, including IDs, descriptions, timestamps, and repository links.
     </li>
     <li>
-        <code>all_repository.csv</code> — Contains metadata about all repositories in the dataset, including repository ID, name, owner, and project language.
+        <code>all_repositories</code> — Contains metadata about all repositories in the dataset, including repository ID, name, owner, and project language.
     </li>
     <li>
-        <code>all_user.csv</code> — Includes detailed user information such as user ID, username, and account type (human or agent).
+        <code>all_user</code> — Includes detailed user information such as user ID, username, and account type (human or agent).
     </li>
     <li>
-        <code>human_pull_request.csv</code> — The main dataset of pull requests created by humans. Each record includes PR ID, title, description, timestamps, and repository linkage.
+        <code>human_pull_request</code> — The main dataset of pull requests created by humans. Each record includes PR ID, title, description, timestamps, and repository linkage.
     </li>
     <li>
-        <code>human_pr_task_type.csv</code> — Provides task classification for each human PR, such as bug fix, refactor, or feature addition.
+        <code>human_pr_task_type</code> — Provides task classification for each human PR, such as bug fix, refactor, or feature addition.
     </li>
     <li>
-        <code>issue.csv</code> — Lists issues linked to PRs, including issue titles, descriptions, and repository references.
+        <code>issue</code> — Lists issues linked to PRs, including issue titles, descriptions, and repository references.
     </li>
     <li>
-        <code>pr_comments.csv</code> — Contains textual comments left by contributors and reviewers within PR discussions.
+        <code>pr_comments</code> — Contains textual comments left by contributors and reviewers within PR discussions.
     </li>
     <li>
-        <code>pr_commits.csv</code> — Includes commit-level details for each PR, such as commit IDs, timestamps, and commit messages.
+        <code>pr_commits</code> — Includes commit-level details for each PR, such as commit IDs, timestamps, and commit messages.
     </li>
     <li>
-        <code>pr_review_comments.csv</code> — Contains inline review comments made during code review.
+        <code>pr_review_comments</code> — Contains review comments made for curated PRs during code review.
     </li>
     <li>
-        <code>pr_review_comments.csv</code> — Contains detailed inline comments from code reviews, capturing reviewers' feedback on specific lines of code within pull requests.
+        <code>pr_reviews</code> — Contains general review metadata for each pull request, including reviewer IDs, states, and timestamps.
     </li>
     <li>
-        <code>pr_reviews.csv</code> — Contains general review metadata for each pull request, including reviewer IDs, states, and timestamps.
-    </li>
-    <li>
-        <code>pr_task_type.csv</code> — Lists task categories of pull requests, such as feature, bug fix, or refactor.
+        <code>pr_task_type</code> — Lists task categories of pull requests, such as feature, bug fix, or refactor.
     </li>
     <li>
         <code>pr_timeline.csv</code> — Records key timeline events for each pull request, including creation, first review, and merge times.
     </li>
     <li>
-        <code>pull_request.csv</code> — Includes all pull request metadata across the dataset, such as ID, title, author, and status.
+        <code>curated_pull_request</code> — Includes all pull request metadata across the dataset, such as ID, title, author, and status.
     </li>
     <li>
-        <code>related_issue.csv</code> — Maps pull requests to their related issues, linking their respective IDs.
+        <code>related_issue</code> — Maps curated pull requests to their related issues, linking their respective IDs.
     </li>
     <li>
-        <code>repository.csv</code> — Contains detailed repository-level information including names, languages, and creation times.
+        <code>repository</code> — Contains detailed curated repository-level information including names, languages, and creation times.
     </li>
     <li>
-        <code>user.csv</code> — Provides user information such as user IDs, usernames, and account attributes.
+        <code>user</code> — Provides user information for curated PRs such as user IDs, usernames, and account attributes.
+    </li>
+    <li>
+        <code>mined_code</code> - Includes the code artifacts (commits, files, diffs) for related human PRs and curated PRs.
+    </li>
+    <li>
+        <code>clone_related_data</code> - Includes the clone-related PRs for title, body and both identified from the AIDev dataset using keyword matching.
     </li>
 </ul>
 
